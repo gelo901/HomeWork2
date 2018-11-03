@@ -30,7 +30,7 @@ user = +prompt(`${d} * ${k} введите ответ ${i} из 12`);
 answer = d * k;
 if(user != answer){
   
-  massFalse.push(` ${i}) ${d} * ${k} = ${user} `);
+  massFalse.push(` ${i}) ${d} * ${k} = ${user} (${answer}) `);
 
 }else{
   massTrue.push(` ${i}) ${d} * ${k} = ${user} `);
