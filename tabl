@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+ </head>
+ <body>
+ 
+<script>
+var test,
+strok,
+d,
+k,
+answer,
+i = 1,
+user,
+massFalse = [],
+ball = 0,
+massTrue = [];
+
+
+
+function multitask(){
+alert('Проверка таблицы умножения');
+alert('Тест на 12 примеров удачи!');
+
+do{
+d = Math.floor(Math.random() * 100);
+k = Math.floor(Math.random() * 100);
+user = +prompt(`${d} * ${k} введите ответ ${i} из 12`);
+answer = d * k;
+if(user != answer){
+  
+  massFalse.push(` ${i}) ${d} * ${k} = ${user} `);
+
+}else{
+  massTrue.push(` ${i}) ${d} * ${k} = ${user} `);
+  ball++;
+}
+i++
+}while(i <= 12)
+  console.log(`Не верные`)
+  console.log(`${massFalse}`);
+  console.log(`Верные`);
+  console.log(`${massTrue}`);
+  console.log(`Ваши баллы ${ball}`);
+  
+
+}
+
+multitask();
+
+
+</script>
+</body>
+</html>
