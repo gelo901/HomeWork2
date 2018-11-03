@@ -38,11 +38,11 @@ if(user != answer){
 }
 i++
 }while(i <= 12)
-  console.log(`Не верные`)
+  console.log(`Не верные:`)
   console.log(`${massFalse}`);
-  console.log(`Верные`);
+  console.log(`Верные:`);
   console.log(`${massTrue}`);
-  console.log(`Ваши баллы ${ball}`);
+  console.log(`Ваши баллы: ${ball}`);
   
 
 }
