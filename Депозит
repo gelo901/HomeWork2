@@ -1,0 +1,31 @@
+var user = +prompt('Введите вашу сумму'),
+ 		 UseRproth = +prompt('Процент'),
+ 		 mons,
+ 		 time = +prompt('Введите количество месяцов'),
+ 		 razshet,
+ 		 res,
+ 		 proth,
+ 		 dolg,
+ 		 dolgOst,
+ 		 i = 0;
+
+
+ function test(x){
+ 	proth = UseRproth/(12 * 100);
+ 	mons =  x * (proth+proth/(Math.pow((1 + proth), time)-1));
+ 	razshet = UseRproth / 100
+ 	res = x * razshet / 12;
+ 	dolg = mons - res;
+ 	dolgOst = x - dolg;
+ 	console.log(`Ежимесячный платеж ${mons.toFixed(2)} грн, Проценты в месяц ${res.toFixed(2)} грн, Остаток долга ${dolg.toFixed(2)} грн, Остаток кредита ${dolgOst.toFixed(2)} грн `);
+ 	do{
+ 		mons = dolgOst * (proth+proth/(Math.pow((1 + proth), time)-1));
+ 		res = dolgOst * razshet / 12;
+ 		dolg = mons - res;
+ 		dolgOst = dolgOst - dolg;
+ 		console.log(`Ежимесячный платеж ${mons.toFixed(2)} грн, Проценты в месяц ${res.toFixed(2)} грн, Остаток долга ${dolg.toFixed(2)} грн, Остаток кредита ${dolgOst.toFixed(2)} грн`);
+ 		i++;
+ 	}while(i < time)
+ }
+
+test(user);
